@@ -12,7 +12,8 @@
 </head>
 <body>
 <div id="app">
-	<button type="button" name="button">Increase</button>
+	<button type="button" name="button" v-on:click="counter++">Increase</button>
+	<button type="button" name="button" v-on:click="counter--">Decrase</button>
 	<p>Counter: {{ counter }}</p>
 	<p>Result: {{ result }}</p>
 </div>
@@ -22,12 +23,6 @@
   data: {
 		counter: 0,
 		result: ''
-  },
-  methods: {
-		increase: function() {
-			this.counter++;
-			this.result = this.counter > 5 ? 'Greater 5' : 'Smaller 5';
-		}
   }
 });
 </script>
