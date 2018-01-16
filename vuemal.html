@@ -9,19 +9,13 @@
 </head>
 <body>
   <div id="app">
-    <button name="button" v-on:click="increase"></button>
-    <p>{{ counter }}</p>
   </div>
 <script>
   new Vue({
     el: "#app",
     data: {
-      counter: 0
     },
     methods: {
-      increase: function () {
-        this.counter++;
-      }
     }
   })
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS</title>
+	<!-- <link rel="stylesheet" href=""> -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<style type="text/css">
+		.farge{
+			width: 550px;
+			height: 550px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+  <div id="app">
+    <button name="button" v-on:click="increase()">Knapp</button>
+    <p>{{ counter }}</p>
+		<p class="farge" v-on:mousemove="updateCoord">
+			Coordinates: {{ x }} / {{ y }} - <span v-on:mousemove.stop="">DEAD SPOT</span>
+		</p>
+		<input type="text" name="" v-model="stepTall" v-on:keyup.enter="">
+  </div>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      counter: 0,
+			x: 0,
+			y: 0,
+			stepTall: 0
+    },
+    methods: {
+      increase: function() {
+
+        this.counter += parseInt(this.stepTall);
+      },
+			updateCoord: function(evt) {
+				this.x = evt.clientX;
+				this.y = evt.clientY;
+			},
+			dummy: function (event) {
+				event.stopPropagation();
+			},
+    }
+  })
+
+</script>
+</body>
+</html>
