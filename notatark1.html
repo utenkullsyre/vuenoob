@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS</title>
+	<!-- <link rel="stylesheet" href=""> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style type="text/css">
+    .red{
+      background-color: skyblue;
+      width: 250px;
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <button type="button" name="button" v-on:click="incrementNr">Click me</button>
+  <input type="text" v-model="stepint" v-on:keyup.enter="alert">
+  <p>{{ increment }}</p>
+  <p class="red" v-on:mousemove="updateCoordinates">
+    Coordinates: {{ x }}/{{ y }} - <span v-on:mousemove.stop="">DEAD SPOT</span>
+  </p>
+</div>
+<script>
+	new Vue({
+	el: '#app',
+  data: {
+  	title: 'Hello World!',
+    increment: 0,
+    x: 0,
+    y: 0,
+    stepint: 0
+  },
+  methods: {
+  	updateCoordinates: function(evt){
+      this.x = evt.clientX;
+      this.y = evt.clientY;
+    },
+    incrementNr: function(){
+      this.increment += parseInt(this.stepint);
+    },
+    alert: function(evt){
+      alert(evt.target.value)
+    }
+  }
+});
+</script>
+</body>
+</html>

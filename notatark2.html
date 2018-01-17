@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VueJS</title>
+	<!-- <link rel="stylesheet" href=""> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<div id="app">
+	<button type="button" name="button" v-on:click="counter++">Increase</button>
+	<button type="button" name="button" v-on:click="counter--">Decrase</button>
+	<p>Counter: {{ counter }}</p>
+	<p>Result: {{ result }}</p>
+</div>
+<script>
+	new Vue({
+	el: '#app',
+  data: {
+		counter: 0,
+		result: ''
+  }
+});
+</script>
+</body>
+</html>
