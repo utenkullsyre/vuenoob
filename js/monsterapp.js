@@ -82,7 +82,6 @@ new Vue({
         return true;
       }
       return false;
-    },
-
+    }
   }
 })
