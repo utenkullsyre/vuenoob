@@ -1,0 +1,35 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+#ark{
+  /* border: 2px rgb(238, 168, 66) solid; */
+  width: 150px;
+  height: 200px;
+  box-shadow: 0px 0px 18px #888888;
+  overflow: hidden;
+  position:   relative;
+}
+
+.bunn{
+  display: flex;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.1em;
+  align-items: center;
+  font-family: sans-serif;
+  transition: all .3s;
+}
+
+.aktiv{
+  background-color: skyblue;
+  color: white;
+}
+
+.bunn span::before{
+
+}
