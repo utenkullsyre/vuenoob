@@ -3,13 +3,20 @@
   justify-content: center;
 }
 
-#ark{
+.ark{
   /* border: 2px rgb(238, 168, 66) solid; */
   width: 150px;
   height: 200px;
-  box-shadow: 0px 0px 18px #888888;
+  box-shadow: 0px 0px 7px #888888;
   overflow: hidden;
   position:   relative;
+  user-select: none;
+  margin: 20px;
+}
+
+.aktiv{
+  box-shadow: 0px 0px 18px #888888 !important;
+
 }
 
 .bunn{
@@ -22,10 +29,9 @@
   font-size: 1.1em;
   align-items: center;
   font-family: sans-serif;
-  transition: all .3s;
 }
 
-.aktiv{
+.aktiv .bunn{
   background-color: skyblue;
   color: white;
 }

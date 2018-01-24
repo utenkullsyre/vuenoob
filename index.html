@@ -8,16 +8,41 @@
   <link rel="stylesheet" type="text/css"href="css\test.css">
 </head>
 <body>
-  <div class="wrapper">
-      <div id="ark" @click="aktiv = !aktiv" >
-        <div class="bunn" :class="{ 'aktiv' : aktiv}">
+  <div class="wrapper" id="app">
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
+          <span>Navn på item</span>
+        </div>
+      </div>
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
+          <span>Navn på item</span>
+        </div>
+      </div>
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
+          <span>Navn på item</span>
+        </div>
+      </div>
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
+          <span>Navn på item</span>
+        </div>
+      </div>
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
+          <span>Navn på item</span>
+        </div>
+      </div>
+      <div class="ark" @click="aktiv = !aktiv"  :class="{ 'aktiv' : aktiv}">
+        <div class="bunn">
           <span>Navn på item</span>
         </div>
       </div>
   </div>
   <script type="text/javascript">
     new Vue({
-      el: '#ark',
+      el: '#app',
       data: {
         aktiv: true
       }
